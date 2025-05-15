@@ -18,6 +18,21 @@ st.set_page_config(
     layout="wide"
 )
 
+required_corpora = [
+    'punkt',
+    'averaged_perceptron_tagger',
+    'wordnet',
+    'brown',
+    'cmudict',
+    'vader_lexicon'
+]
+
+for corpus in required_corpora:
+    try:
+        nltk.data.find(f'tokenizers/{corpus}')
+    except LookupError:
+        nltk.download(corpus)
+        
 # Download necessary corpora if not already present
 try:
     nltk.data.find('tokenizers/punkt')
