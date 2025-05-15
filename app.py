@@ -12,7 +12,11 @@ from utils import export_to_pdf
 import nltk
 from textblob import download_corpora
 
-st.set_page_config(page_title="MoodMirror - AI Mental Health Journal", layout="centered")
+st.set_page_config(
+    page_title="MoodMirror - AI Mental Health Journal",
+    page_icon="🧠",
+    layout="wide"
+)
 
 # Download necessary corpora if not already present
 try:
