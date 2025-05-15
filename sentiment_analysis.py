@@ -3,6 +3,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import nltk
 import plotly.express as px  # Add this with other imports
 import random  # Add this with other imports
+from textblob import download_corpora
 
 nltk.download('punkt')
 
