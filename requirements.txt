@@ -1,7 +1,8 @@
 streamlit
 textblob
-nltk
-matplotlib
-seaborn
-wordcloud
 vaderSentiment
+matplotlib
+wordcloud
+pandas
+numpy
+plotly
