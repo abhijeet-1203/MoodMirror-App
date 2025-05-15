@@ -12,6 +12,8 @@ from utils import export_to_pdf
 import nltk
 from textblob import download_corpora
 
+st.set_page_config(page_title="MoodMirror - AI Mental Health Journal", layout="centered")
+
 # Download necessary corpora if not already present
 try:
     nltk.data.find('tokenizers/punkt')
@@ -31,7 +33,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.set_page_config(page_title="MoodMirror - AI Mental Health Journal", layout="centered")
+
 
 # Add cursor CSS immediately after
 st.markdown("""
