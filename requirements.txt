@@ -6,3 +6,4 @@ wordcloud
 pandas
 numpy
 plotly
+nltk

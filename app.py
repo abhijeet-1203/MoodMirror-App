@@ -9,7 +9,27 @@ from utils import save_entry, load_entries
 import plotly.express as px 
 import random  
 from utils import export_to_pdf
+import nltk
+from textblob import download_corpora
 
+# Download necessary corpora if not already present
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    download_corpora.download_all()
+
+
+st.markdown(
+    """
+    <head>
+      <link rel="manifest" href="/manifest.json">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#6c5ce7">
+    </head>
+    """,
+    unsafe_allow_html=True
+)
 
 st.set_page_config(page_title="MoodMirror - AI Mental Health Journal", layout="centered")
 
